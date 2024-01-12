@@ -103,7 +103,7 @@ file it makes sense. This is probably not an error and was purposely made this w
 
 <br>
 
-2. Let's try to use 'cat' with a directory and see what happens. For this example, we will start at the working directory /home/lecture1.
+2. Let's try to use `cat` with a directory and see what happens. For this example, we will start at the working directory /home/lecture1.
    
 <br>
 
@@ -114,7 +114,7 @@ file it makes sense. This is probably not an error and was purposely made this w
 > By pairing concatenate with a directory it can't print anything because there are no specific file contents. This ends up resulting in an error statment
 stating that it is a directory. This makes sense because as stated it cant realy print any file contents.
 
-<br>
+<br>  
 
 3. Lastly, let's pair `cat` with a file. In this case, we will start with the working directory being /home/lecture1/messages.
    

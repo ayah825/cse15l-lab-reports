@@ -88,7 +88,7 @@ an error.
 <br>
 
 ## Lastly, let's talk about the command `cat` which stands for concatenate and prints the contents of a file.
-1. h
+1. Next, lets try to use the `cat` command without an argument. The starting working directory will be /home/lecture1/messages.
 
 <br>
 
@@ -96,11 +96,14 @@ an error.
 
 <br>
 
-> h
+> In this case, by typing just `cat` and pressing enter, nothing happens. Then when you try to type anything and press enter it just regurgitates that
+information back to you. Thankfully, I was able to get it to stop copying me by using ctrl d which I found through a quick google search thanks to [this](https://www.google.com/search?q=how+to+stop+cat+in+terminal+from+command+line&oq=how+to+stop+cat+in+terminal+from+co&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRirAjIHCAYQIRirAjIHCAcQIRifBdIBCTIwMzE3ajBqOagCALACAA&sourceid=chrome&ie=UTF-8)
+pop up (alternativly you could just open another terminal). This is seemingly strange as concatenate should print the contents of a file, howver, due to the lack of
+file it makes sense. This is probably not an error and was purposly made this way.
 
 <br>
 
-2. h
+2. Let's try
    
 <br>
 

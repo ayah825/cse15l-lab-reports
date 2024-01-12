@@ -98,32 +98,37 @@ an error.
 
 > In this case, by typing just `cat` and pressing enter, nothing happens. Then when you try to type anything and press enter it just regurgitates that
 information back to you. Thankfully, I was able to get it to stop copying me by using ctrl d which I found through a quick google search thanks to [this](https://www.google.com/search?q=how+to+stop+cat+in+terminal+from+command+line&oq=how+to+stop+cat+in+terminal+from+co&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRirAjIHCAYQIRirAjIHCAcQIRifBdIBCTIwMzE3ajBqOagCALACAA&sourceid=chrome&ie=UTF-8)
-pop up (alternativly you could just open another terminal). This is seemingly strange as concatenate should print the contents of a file, howver, due to the lack of
-file it makes sense. This is probably not an error and was purposly made this way.
+pop up (alternativly you could just open another terminal). This is seemingly strange as concatenate should print the contents of a file, however, due to the lack of
+file it makes sense. This is probably not an error and was purposely made this way.
 
 <br>
 
-2. Let's try
+2. Let's try to use 'cat' with a directory and see what happens. For this example, we will start at the working directory /home/lecture1.
    
 <br>
 
-![Image](ls1.png)
+![Image](cat2.png)
 
 <br>
 
-> h
+> By pairing concatenate with a directory it can't print anything because there are no specific file contents. This ends up resulting in an error statment
+stating that it is a directory. This makes sense because as stated it cant realy print any file contents.
 
 <br>
 
-3. h 
+3. Lastly, let's pair `cat` with a file. In this case, we will start with the working directory being /home/lecture1/messages.
    
 <br>
 
-![Image](ls1.png)
+![Image](cat3.png)
 
 <br>
 
-> h
+> In this case, by typing `cat en-us.txt`, the contents of en-us.txt are printed. In this case `Hello World!` was printed. This makes sense because cat prints the
+contents of a file of which en-us.txt is. This is not an error and is the command just working. 
 
 <br>
 
+<br>
+
+Thnaks for reading my lab report!

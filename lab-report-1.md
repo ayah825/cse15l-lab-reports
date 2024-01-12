@@ -1,6 +1,6 @@
 # **Lab Report 1: Remote Access and FileSystem**
 
-Hello and welcome to my firt lab report for CSE 15L! This lab report will cover basic commands and demonstrate my knowlage of them. 
+Hello and welcome to my first lab report for CSE 15L! This lab report will cover basic commands and demonstrate my knowlage of them. 
 As a note please don't mind my horrible spelling; spell cheak seems to not exist on this website for some reason.
 
 <br>  

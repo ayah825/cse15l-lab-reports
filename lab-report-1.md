@@ -16,7 +16,9 @@ As a note please don't mind my horrible spelling; spell cheak seems to not exist
 
 > As you can see from the image typing `cd` into the terminal changed the directory path bringing you one directiry "out". This makes
 sense because when you type `cd` you're telling the code to change the directory. Without any other instruction, the code takes this as an
-intruction to go to the directory "outside" of the currect one. This is what is is expected and therefore no error occured.
+intruction to go to the parent directory. This is what is is expected and therefore no error occured. To clarify, when in a deeply nested
+directory it takes you to the "outermost" directory. For example, when starting in the directory `/home/lecture1/messages/hello/english`,
+typing `cd` will bring you to the working directory of `/home`. 
 
 <br>  
 

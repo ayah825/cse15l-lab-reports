@@ -1,7 +1,9 @@
 # **Lab Report 1: Remote Access and FileSystem**
 
 Hello and welcome to my first lab report for CSE 15L! This lab report will cover basic commands and demonstrate my knowlage of them. 
-As a note please don't mind my horrible spelling; spell cheak seems to not exist on this website for some reason.
+As a note please don't mind my horrible spelling; spell cheak seems to not exist on this website for some reason. Also upon submission 
+of this document a a pdf it seems as though the code segments are not encased or highligted in the document despite being higlighted in 
+the actual webpage. 
 
 <br>  
 

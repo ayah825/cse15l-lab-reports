@@ -83,12 +83,14 @@ should work the same on my UCSD account.
 
 1. Firstly, I typed in the url `http://localhost:4000/add-message?s=Hello&user=jpolitz`. As mentioed prior, the
    URL input tells the code what to do so the message in this case would be "Hello" and the user would be "jpolitz".
-   ![Adding the first message](lab2pics/)
+   
+   ![Adding the first message](lab2pics/chat1.png)
    
    
-2. Now, to add a new input I typed in the url `http://localhost:4000/add-message?s=Hi!%20Hows%20it%20going?&user=ayah`.
+3. Now, to add a new input I typed in the url `http://localhost:4000/add-message?s=Hi!%20Hows%20it%20going?&user=ayah`.
    In this case, the message is "Hi! Hows it going?" and the user is "ayah".
-   ![Adding the seccond message](lab2pics/)
+   
+   ![Adding the seccond message](lab2pics/chat2.png)
 
 <br>
 

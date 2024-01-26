@@ -100,7 +100,14 @@ should work the same on my UCSD account.
     > could have nothing past the domain. In my implementation this results in the current messages being printed. If there
     > have been no prior messages nothing prints. The last option the code can handle is the case where the user adds a
     > path and query to their URL formatted correctly (explained on the lab report [website](https://ucsd-cse15l-w24.github.io/week3/index.html)).
-    > 
+    >
+    > In this case the ArrayList `messages` has "Hello" added to it and `users` has "jpolitz" append to it.
+    > Additionally a new varibale called `parameters1` is initialized to `url.getQuery().split("=")` which is the
+    > query of the URL split into 3 substrings split at `=` signs (it's a String array). Then, to split up the query
+    > even more a new varible called `parameters2` is initialized to `parameter1[1].split("&")` in order to split up
+    > the middle string at the `&`. Using these substrings I initialized the appropriate ArrayLists with their values.
+    > The last variable that I used is `output` (the StringBuilder). This is initialied with all the messages and users
+    > in the correct format for printing. 
 
 <br>
    

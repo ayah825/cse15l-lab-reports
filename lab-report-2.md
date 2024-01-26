@@ -2,7 +2,8 @@
 
 Welcome to my seccond lab report! In this lab report I will be showing you a server I created 
 and SSH Keys. Once again, please don't mind my spelling, I need to figure out how to enable spell 
-check on github in the future.
+check on github in the future. Also, as I have learned from the prior lab report, the code blocks are
+not really vissible in the pdf verison so going to my website might be easier for grading.
 
 ## Chat Web Server:
 For this assignment a created a web server that essentially takes the URL and parses a message and 
@@ -113,7 +114,7 @@ should work the same on my UCSD account.
 
 <br>
    
-3. Now, to add a new input I typed in the url `http://localhost:4000/add-message?s=Hi!%20Hows%20it%20going?&user=ayah`.
+3. Now, to add a new input I typed in the url `http://localhost:4000/add-message?s=Hi! Hows it going?&user=ayah`.
    In this case, the message is "Hi! Hows it going?" and the user is "ayah".
    
    ![Adding the seccond message](lab2pics/chat2.png)
@@ -123,7 +124,7 @@ should work the same on my UCSD account.
    >
    > The `handleRequest` method once again takes a URL as an argument. In this case we also go with the third sequence
    > where the query is used to determine the user and the message. "Hi! Hows it going?" is appened onto the ArrayList
-   > `messages` and "ayah" is appened onto the users ArrayList. The string arrays `parameters1` and `parameters2` are
+   > `messages` and "ayah" is appened onto the `users` ArrayList. The string arrays `parameters1` and `parameters2` are
    > both intitialized simularly. The `output` StriungBuilder is also initialized again to contain all the messages and
    > users in the correct format for printing. 
 
@@ -146,7 +147,12 @@ Lastly, here is a screenshot of me signing in and not being propted for my passw
 <br>
 
 ## What I Learned:
-h
+In terms of what I have learned so far in the past few labs, I have certianly gotten more comfortable with servers 
+which I definitly thought was completly out of my reach in the past. Obviouly, the past few labs have also introduced 
+a lot of new commands wich have been helpful. I think one of the most random but helpful things I learned during lab is
+that you can use the up and down arrows on your keyboard to switch between past commands which has been espicialy important 
+for quickly running my server. Overall, I feel like these past weeks have intorduced me to servers and shown me how easy and 
+simple they actually can be. 
 
 <br>
 

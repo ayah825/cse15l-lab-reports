@@ -6,21 +6,27 @@ class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
     // various requests.
     ArrayList<String> messages = new ArrayList<>();
+    ArrayList<String> users = new ArrayList<>();
+    String output = new String();
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
-            for (int i = 0; i < messages.size(); i++) {
-                return String.format(messages.get(i) + "\n");
+            for (int i = 0; i < messages.size() - 1; i++) {
+                output.concat(users.get(i) + ": " + messages.get(i) + "\n");
             }
-            return null; 
+            return output;
         } else {
             if (url.getPath().contains("/add-message")) {
-                String[] parameters = url.getQuery().split("=");
-                if (parameters[0].equals("s")) {
-                    messages.add(parameters[1]);
-                    String temp = parameters[1];
-                    return temp + "has been added";
+                String[] parameter1 = url.getQuery().split("=");
+                String[] parameter2 = url.getQuery().split("&");
+                if (parameter1[0].equals("s")) {
+                    messages.add(parameter1[1]);
                 }
+                if (parameter2[2].equals("user")) {
+                    String str = parameter1[2];
+                    users.add(str.substring(0, str.length() - 5));
+                }
+                return users.getLast() + ": " + messages.getLast();
             }
             return "404 Not Found!";
         }

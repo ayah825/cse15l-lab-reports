@@ -130,7 +130,18 @@ should work the same on my UCSD account.
 <br>
 
 ## SSH Keys:
-h
+Now, I will demonstrate that I successfully signed into my UCSD account and saved the password to my computer.
+Below is the absalute path for the private key on my personaly computer.  
+
+![finding private ssh](lab2pics/privatessh.png)
+
+Below is a screenshot of th path to the public key that I found while signed into my server. 
+
+![finding public ssh](lab2pics/publicssh.png)
+
+Lastly, here is a screenshot of me signing in and not being propted for my password. 
+
+![logging in to UCSD account](lab2pics/login.png)
 
 <br>
 

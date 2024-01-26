@@ -94,10 +94,11 @@ should work the same on my UCSD account.
     > port number depending on the argument. In this case I used the port number 4000.
     >
     > In the `handleRequest` method, as mentioned prior, we use the ArrayLists `messages` and `users` to store the
-    > collected data along with the StringBuilder `output` which contains what I want to output. Prior to the methods
-    > first call these are all uninitialized. In the function, there are basically three options or paths for the function
-    > to take. The first is that the URL could be invalid; this just results in a 404 error. The next is that the URL
-    > could have nothing past the domain. In my implementation this results in the current messages being printed. If there
+    > collected data along with the StringBuilder `output` which contains what I want to output. A URI is passed to
+    > the function wich is used to get the query in some cases. Prior to the methods first call these are all
+    > uninitialized. In the function, there are basically three options or paths for the function to take.
+    > The first is that the URL could be invalid; this just results in a 404 error. The next is that the URL could have
+    > nothing past the domain. In my implementation this results in the current messages being printed. If there
     > have been no prior messages nothing prints. The last option the code can handle is the case where the user adds a
     > path and query to their URL formatted correctly (explained on the lab report [website](https://ucsd-cse15l-w24.github.io/week3/index.html)).
     >

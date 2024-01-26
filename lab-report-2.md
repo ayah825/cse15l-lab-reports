@@ -108,7 +108,8 @@ should work the same on my UCSD account.
     > even more a new varible called `parameters2` is initialized to `parameter1[1].split("&")` in order to split up
     > the middle string at the `&`. Using these substrings I initialized the appropriate ArrayLists with their values.
     > The last variable that I used is `output` (the StringBuilder). This is initialied with all the messages and users
-    > in the correct format for printing. 
+    > in the correct format for printing. Obviously, the URI `URL` is changed and the other varibles depenent on this
+    > are changed. These varibles include `users`, `messages`, `paramerters1`, `parameters2`, and `output`. 
 
 <br>
    
@@ -117,7 +118,14 @@ should work the same on my UCSD account.
    
    ![Adding the seccond message](lab2pics/chat2.png)
 
-   h
+   > Once again the `main` method and the `handleRequest` method are called. The main method litraily does the exact
+   > same thing so I wont rehash that again. It takes the same string argument and that is parsed a the port number.
+   >
+   > The `handleRequest` method once again takes a URL as an argument. In this case we also go with the third sequence
+   > where the query is used to determine the user and the message. "Hi! Hows it going?" is appened onto the ArrayList
+   > `messages` and "ayah" is appened onto the users ArrayList. The string arrays `parameters1` and `parameters2` are
+   > both intitialized simularly. The `output` StriungBuilder is also initialized again to contain all the messages and
+   > users in the correct format for printing. 
 
 <br>
 

@@ -12,7 +12,7 @@ the actual webpage.
    
 <br> 
 
-![Image](cd1.png)
+![Image](lab1pics/cd1.png)
 
 <br>
 
@@ -28,7 +28,7 @@ typing `cd` will bring you to the working directory of `/home`.
 
 <br>
 
-![Image](cd2.png)
+![Image](lab1pics/cd2.png)
 
 <br>
 
@@ -43,7 +43,7 @@ no errors appeared.
 
 <br>  
 
-![Image](cd3.png)
+![Image](lab1pics/cd3.png)
 
 <br>  
 
@@ -55,7 +55,7 @@ This makes sense as `cd` literally is called change **directory**. As `en-us.txt
 
 <br>
 
-![Image](ls1.png)
+![Image](lab1pics/ls1.png)
 
 <br>
 
@@ -68,7 +68,7 @@ directory making it the one that was "listed". This output was not an error and 
 
 <br>
 
-![Image](ls2.png)
+![Image](lab1pics/ls2.png)
 
 <br>
 
@@ -81,7 +81,7 @@ is within the scope, so to speak, of `lecture1` (the file structure is set up so
 
 <br>
 
-![Image](ls3.png)
+![Image](lab1pics/ls3.png)
 
 <br>
 
@@ -96,7 +96,7 @@ an error.
 
 <br>
 
-![Image](cat1.png)
+![Image](lab1pics/cat1.png)
 
 <br>
 
@@ -111,7 +111,7 @@ file it makes sense. This is probably not an error and was purposely made this w
    
 <br>
 
-![Image](cat2.png)
+![Image](lab1pics/cat2.png)
 
 <br>
 
@@ -124,7 +124,7 @@ stating that it is a directory. This makes sense because as stated it cant realy
    
 <br>
 
-![Image](cat3.png)
+![Image](lab1pics/cat3.png)
 
 <br>
 

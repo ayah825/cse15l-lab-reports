@@ -88,28 +88,28 @@ should work the same on my UCSD account.
    ![Adding the first message](lab2pics/chat1.png)
    
     > To get this output the code calls a few methods. These methods are the `main` method and the `handleRequest`
-    > method. Seeing as the main method is relativly normal I won't really adress it too much but it takes a string
+    > method. Seeing as the `main` method is relativly normal I won't really adress it too much but it takes a string
     > argument from the command line. The expected string to run the server is the port number. The method then takes
-    > the port number and uses it to start the server by passing it as an argument to the Server method. The Server
-    > method then takes this information and starts the server. No specific values are changed in main other than the
+    > the port number and uses it to start the server by passing it as an argument to the `Server` method. The `Server`
+    > method then takes this information and starts the server. No specific values are changed in `main` other than the
     > port number depending on the argument. In this case I used the port number 4000.
     >
     > In the `handleRequest` method, as mentioned prior, we use the ArrayLists `messages` and `users` to store the
-    > collected data along with the StringBuilder `output` which contains what I want to output. A URI is passed to
+    > collected data along with the `StringBuilder` `output` which contains what I want to output. A `URI` is passed to
     > the function wich is used to get the query in some cases. Prior to the methods first call these are all
     > uninitialized. In the function, there are basically three options or paths for the function to take.
-    > The first is that the URL could be invalid; this just results in a 404 error. The next is that the URL could have
+    > The first is that the `URL` could be invalid; this just results in a 404 error. The next is that the `URL` could have
     > nothing past the domain. In my implementation this results in the current messages being printed. If there
     > have been no prior messages nothing prints. The last option the code can handle is the case where the user adds a
-    > path and query to their URL formatted correctly (explained on the lab report [website](https://ucsd-cse15l-w24.github.io/week3/index.html)).
+    > path and query to their `URL` formatted correctly (explained on the lab report [website](https://ucsd-cse15l-w24.github.io/week3/index.html)).
     >
-    > In this case the ArrayList `messages` has "Hello" added to it and `users` has "jpolitz" append to it.
+    > In this case the `ArrayList` `messages` has "Hello" added to it and `users` has "jpolitz" append to it.
     > Additionally a new varibale called `parameters1` is initialized to `url.getQuery().split("=")` which is the
-    > query of the URL split into 3 substrings split at `=` signs (it's a String array). Then, to split up the query
+    > query of the `URL` split into 3 substrings split at `=` signs (it's a String array). Then, to split up the query
     > even more a new varible called `parameters2` is initialized to `parameter1[1].split("&")` in order to split up
     > the middle string at the `&`. Using these substrings I initialized the appropriate ArrayLists with their values.
-    > The last variable that I used is `output` (the StringBuilder). This is initialied with all the messages and users
-    > in the correct format for printing. Obviously, the URI `URL` is changed and the other varibles depenent on this
+    > The last variable that I used is `output` (the `StringBuilder`). This is initialied with all the messages and users
+    > in the correct format for printing. Obviously, the `URI` `URL` is changed and the other varibles depenent on this
     > are changed. These varibles include `users`, `messages`, `paramerters1`, `parameters2`, and `output`. 
 
 <br>
@@ -119,13 +119,13 @@ should work the same on my UCSD account.
    
    ![Adding the seccond message](lab2pics/chat2.png)
 
-   > Once again the `main` method and the `handleRequest` method are called. The main method litraily does the exact
+   > Once again the `main` method and the `handleRequest` method are called. The `main` method litraily does the exact
    > same thing so I wont rehash that again. It takes the same string argument and that is parsed a the port number.
    >
-   > The `handleRequest` method once again takes a URL as an argument. In this case we also go with the third sequence
+   > The `handleRequest` method once again takes a `URL` as an argument. In this case we also go with the third sequence
    > where the query is used to determine the user and the message. "Hi! Hows it going?" is appened onto the ArrayList
    > `messages` and "ayah" is appened onto the `users` ArrayList. The string arrays `parameters1` and `parameters2` are
-   > both intitialized simularly. The `output` StriungBuilder is also initialized again to contain all the messages and
+   > both intitialized simularly. The `output` `StriungBuilder` is also initialized again to contain all the messages and
    > users in the correct format for printing. 
 
 <br>

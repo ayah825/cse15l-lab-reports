@@ -136,9 +136,16 @@ Below is the absalute path for the private key on my personaly computer.
 
 ![finding private ssh](lab2pics/privatessh.png)
 
+As you can see from `ls` there are 3 files in that path. The actual file for the private key is `id_rsa`. This 
+makes the absalute path `/Users/ayahibrahim/.ssh/id-rsa`. 
+
 Below is a screenshot of th path to the public key that I found while signed into my server. 
 
 ![finding public ssh](lab2pics/publicssh.png)
+
+As you can see from `ls` again there are 4 files in this directory. The public key is found in the `id_rsa.pub` file.
+I am not including screenshots because (at least I assume) a hashed version of these keys is in the file. This makes the
+absalute path `/home/linux/ieng6/oce/7e/a5ibrahim/.ssh/id_rsa.pub`.
 
 Lastly, here is a screenshot of me signing in and not being propted for my password. 
 

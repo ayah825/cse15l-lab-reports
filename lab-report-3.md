@@ -11,7 +11,7 @@ cant figure out how to use a spell checher on github.
 For this lab, I will be analyzing [this](https://github.com/ucsd-cse15l-f23/lab3) repository fron last
 weeks lab. Specifically I will be focusing on `ArrayExamples.java` by testing it with `ArrayTests.java`.
 Let's start by adding more tests for `ArrayExamples` to make sure that the function `reverseInPlace` is 
-working properly. `ReverseInPlace` is sopposed to reverse the order of the elements in an array.
+working properly. `reverseInPlace` is sopposed to reverse the order of the elements in an array.
 
 1. Failure inducing input:
 
@@ -57,6 +57,40 @@ working properly. `ReverseInPlace` is sopposed to reverse the order of the eleme
 > `{5, 4, 3, 2, 1}`.
 
 4. The Bug:
-  hi
+
+>  Now let's actually take a look at the code. Below is the code for the `reverseInPlace` function.
+
+```
+// Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+
+> If you notice, the code (and the output when testing) seems to only reverse the first half of the
+> array but not the last. This is illustrated by how the for loop is set up. Beased on the code the
+> first elements are changed to the correct value but have their values overwritten, meaning that
+> those values are lost and not used to set the last elements. Instead, we need a temprary vauable
+> to store that value and set the appropriate value at the end of the array to it. Below is the code
+> with that change.
+
+```
+// Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    int temp;
+    for(int i = 0; i < arr.length/2; i += 1) {
+      temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+  }
+```
+
+> With these changes, this code now passes all of the tests (note that there are additional tests
+> not mentioned before)!
+
+![tests being run](lab3pics/tests.png)
 
 ## Commands:

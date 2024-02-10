@@ -94,3 +94,23 @@ working properly. `reverseInPlace` is sopposed to reverse the order of the eleme
 ![tests being run](lab3pics/tests.png)
 
 ## Commands:
+
+For this part of the lab report, I am going to explore the `grep` command because I feel like I don't quite understand 
+what it does. According to class, `grep` is used to find a string in a specific file or collection of files. Let's try to 
+use it in differnt ways.
+
+1. `grep <string> <file>`:
+
+> h
+   
+2. `grep `:
+
+> h
+   
+3. `grep `:
+
+> h
+
+4. `grep `:
+
+> h

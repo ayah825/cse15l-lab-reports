@@ -2,7 +2,7 @@
 
 Hello and welcome to this lab report. In this report I will be discussing bugs and 
 reserching commands. Please ignore my spelling, I am aware that it is not great, but I
-cant figure out how to use a spell checher on github.
+cant figure out how to use a spell checker on github.
 
 <br>  
 
@@ -133,7 +133,8 @@ User biomed $ grep -i health 1468-6708-3-1.txt
           health status, limitations in activities of daily living ...
 ```
 
-> As you can see this prints all the lines that contain the word `health` regardless of case sensitivity. Now lets try to use
+> As you can see this prints all the lines that contain the word `health` regardless of case sensitivity. This is important 
+> because it gives us to search with a term being case insensitive. Now lets try to use
 > it with a word that doesnt exit and see what happens. I will search for the term `tree` from the same directory. I will
 > use the command `grep -i tree 1468-6708-3-1.txt` while being in the working directory `/Users/'name'/docsearch/technical/biomed`.
 > This outputs:
@@ -167,7 +168,8 @@ health
 ...
 ```
 
-> As you can see it does eaxctly what you would expect. Let's try to use this command but with wc to count the number of words.
+> As you can see it does eaxctly what you would expect. This could be helpful if you did not care about 
+> the context of a string being mentioned. Let's try to use this command but with `wc` to count the number of words.
 > This would be done by using the command `grep -oi health 1468-6708-3-1.txt | wc`.
 
 ```
@@ -175,7 +177,7 @@ User biomed $ grep -oi health 1468-6708-3-1.txt | wc
       50      50     350
 ```
 
-> This also seems to work as expected. 
+> This also seems to work as expected. Using `wc` with `grep` is helpful as it counts the number of times a string is printed.
    
 3. `grep --color <string> <file>`:
 
@@ -186,14 +188,16 @@ User biomed $ grep -oi health 1468-6708-3-1.txt | wc
 
 ![output of grep color](lab3pics/grepColor1.png)
 
-> This clearly colors the key word with red making them pop out. Now let's try this ame thing but search for a longer string. Let's search for
+> This clearly colors the key word with red making them pop out. This could be used to higlight certain words for a coders convenience.
+> Now let's try this same thing but search for a longer string. Let's search for
 > `the strongest health relationships` and use -i as well to make it not case sensitive. We will use the same file and working directory. By
 > typing the command `grep -i-color 'the strongest health relationships' 1468-6708-3-1.txt` it results in the output(in a screenshot to show the color):
 
 ![output of grep color](lab3pics/grepColor2.png)
 
 > This still works. Note the ` ' ` symbols arround the string. This seems to be nessarary for the command to work (otherwise it assumes that the next words
-> are directories or files to search through. 
+> are directories or files to search through. It's good that the color higlighting works as in my opinion using it on long strings
+> is the best use case for the command.
 
 4. `grep -c <string> <file>`:
 
@@ -242,7 +246,8 @@ biomed/1471-2407-2-3.txt:19
 ```
 
 > Interestingly, this seems to write the file name and the numebr of occurences next to each other without giving a final
-> total. I tried to reverse the order of `-rc` but that didn't do anything.
+> total. I tried to reverse the order of `-rc` but that didn't do anything. This is still helpful though, as it's faster than
+> manualy inputing the command for each file. 
 
 Overall, this helped be get a better understanding of `grep` and made me realize how many things it can do. Also in case 
 you are wondering, I did not use `grep` on directories because it dosent do anything (unless you recursivly search).

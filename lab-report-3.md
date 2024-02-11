@@ -148,7 +148,7 @@ User biomed $ grep -i tree 1468-6708-3-1.txt
 2. `grep -o <string> <file>`:
 
 > Accordng to [Geeks for Geeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/), adding `-o` to `grep` should print only
-> the search term instead of the whole line. Let's try this with the same file we used in the first example and with `-i as well to
+> the search term instead of the whole line. Let's try this with the same file we used in the first example and with `-i` as well to
 > remove case sensitivity. When giving the command `grep -oi health 1468-6708-3-1.txt` it results in the output:
 
 ```
@@ -184,13 +184,13 @@ User biomed $ grep -oi health 1468-6708-3-1.txt | wc
 > `grep --color health 1468-6708-3-1.txt` into the terminal with the working directory being `/Users/'name'/docsearch/technical/biomed`.
 > This results in the output (in a screenshot to show the color):
 
-![output of grep --color health 1468-6708-3-1.txt](lab3pics/grepColor1.png)
+![output of grep color](lab3pics/grepColor1.png)
 
 > This clearly colors the key word with red making them pop out. Now let's try this ame thing but search for a longer string. Let's search for
 > `the strongest health relationships` and use -i as well to make it not case sensitive. We will use the same file and working directory. By
 > typing the command `grep -i-color 'the strongest health relationships' 1468-6708-3-1.txt` it results in the output(in a screenshot to show the color):
 
-![output of grep --color health 1468-6708-3-1.txt](lab3pics/grepColor1.png)
+![output of grep color](lab3pics/grepColor2.png)
 
 > This still works. Note the ` ' ` symbols arround the string. This seems to be nessarary for the command to work (otherwise it assumes that the next words
 > are directories or files to search through. 

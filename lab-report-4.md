@@ -68,6 +68,13 @@ This compiled and ran the tests sucsessfuly. As you can see it has 1 error.
 
 ## Step 7: Editing the code file to fix the failing test
 
+Now lets use vim to edit the error. The error is in the File `ListExamples.java` so we will try to edit that file.
+
+`vim L` `<tab>` `.` `<tab>` `<enter>` (every time you enter tab it autofills as much as possible so you effectivly end up typing
+the command `vim ListExamples.java`.
+
+Now let's actually edit the file in vim. To go down to the error press
+
 ## Step 8: Running the tests, demonstrating that they now succeed
 
 ## Step 9: Commiting and pushing the resulting change to your Github account

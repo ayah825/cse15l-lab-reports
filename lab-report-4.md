@@ -56,13 +56,13 @@ First we actually have to get into the file. To do that we type:
 
 Now lets compile and run the tests. To do that I typed:
 
-`<control>` `<r>` `javac` (which searches for javac in previous commands and effectivly typed the command 
+`<control>` and `<r>` (at the same time) `javac` (which searches for javac in previous commands and effectivly typed the command 
 `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`) then press `enter`
 
-`<control>` `<r>` `java -` (again it seraches for `java -` in previous command run in history and finds the command
+`<control>` and `<r>` (at the same time) `java -` (again it seraches for `java -` in previous command run in history and finds the command
 `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` then press `enter`
 
-This compiled and ran the tests sucsessfuly.
+This compiled and ran the tests sucsessfuly. As you can see it has 1 error.
 
 ![Screenshot of failing test](lab4pics/testFail.png)
 

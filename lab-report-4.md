@@ -42,7 +42,7 @@ the lab write up using the `SSH` URL. First I went to my fork of the repository 
 
 Now I am going to clone this so that I can work with it (I cloned it from my personal fork unlike the screenshot). In my terminal I will type:
 
-`git clone ` then at the same time press `<command>` and `v`
+`git clone ` then at the same time press `<command>` and `v` then press `<enter>` (this should paste the link you copied)
 
 This now has cloned the repository into our machine so that we can actualy modify it.
 
@@ -52,7 +52,7 @@ This now has cloned the repository into our machine so that we can actualy modif
 
 First we actually have to get into the file. To do that we type:
 
-`cd` `<space>` `l` `<tab>` `<enter>` (tab autofills in lab7/)
+`cd` `<space>` `l` `<tab>` `<enter>` (tab autofills in `lab7/`)
 
 Now lets compile and run the tests. To do that I typed:
 
@@ -71,7 +71,7 @@ This compiled and ran the tests sucsessfuly. As you can see it has 1 error.
 Now lets use vim to edit the error. The error is in the File `ListExamples.java` so we will try to edit that file.
 
 `vim L` `<tab>` `.` `<tab>` `<enter>` (every time you enter tab it autofills as much as possible so you effectivly end up typing
-the command `vim ListExamples.java`.
+the command `vim ListExamples.java`).
 
 Now let's actually edit the file in vim. To go down to the error press the `<down arrow>` until you get to line 44 (43 times).
 Now you want to get your cursor to hover over the number 1. To do that press the `<right arrow>` (11 times).
@@ -110,7 +110,8 @@ Now we want to commit these changes to our Github account. To do this type this 
 
 ![Screenshot of commiting](lab4pics/commit.png)
 
-This should commit the change to my GitHub account.
+This should commited the change to my GitHub account successfuly.
 
 
-Thank you for reading my lab report!
+I am aware that some of these may not have been the most effecient way to enter commands or edit in vim but 
+this is how I would do the steps. Thank you for reading my lab report!

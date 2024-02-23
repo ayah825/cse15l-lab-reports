@@ -62,7 +62,7 @@ Now lets compile and run the tests. To do that I typed:
 `<control>` `<r>` `java -` (again it seraches for `java -` in previous command run in history and finds the command
 `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` then press `enter`
 
-this compiled and ran our tests sucsessfuly.
+This compiled and ran the tests sucsessfuly.
 
 ![Screenshot of failing test](lab4pics/testFail.png)
 

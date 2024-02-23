@@ -40,13 +40,13 @@ the lab write up using the `SSH` URL. First I went to my fork of the repository 
 
 ![Screenshot of ssh](lab4pics/forkClone.png)
 
-Now I am going to clone this so that I can work with it. In my terminal I will type:
+Now I am going to clone this so that I can work with it (I cloned it from my personal fork unlike the screenshot). In my terminal I will type:
 
 `git clone ` then at the same time press `<command>` and `v`
 
 This now has cloned the repository into our machine so that we can actualy modify it.
 
-![Screenshot of git clone](lab4pics/gitClone.png)
+![Screenshot of git clone](lab4pics/clone.png)
 
 ## Step 6: Running the tests, demonstrating that they fail
 
@@ -57,10 +57,10 @@ First we actually have to get into the file. To do that we type:
 Now lets compile and run the tests. To do that I typed:
 
 `<control>` and `<r>` (at the same time) `javac` (which searches for javac in previous commands and effectivly typed the command 
-`javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`) then press `enter`
+`javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`) then press `<enter>`
 
 `<control>` and `<r>` (at the same time) `java -` (again it seraches for `java -` in previous command run in history and finds the command
-`java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` then press `enter`
+`java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` then press `<enter>`
 
 This compiled and ran the tests sucsessfuly. As you can see it has 1 error.
 
@@ -73,8 +73,44 @@ Now lets use vim to edit the error. The error is in the File `ListExamples.java`
 `vim L` `<tab>` `.` `<tab>` `<enter>` (every time you enter tab it autofills as much as possible so you effectivly end up typing
 the command `vim ListExamples.java`.
 
-Now let's actually edit the file in vim. To go down to the error press
+Now let's actually edit the file in vim. To go down to the error press the `<down arrow>` until you get to line 44 (43 times).
+Now you want to get your cursor to hover over the number 1. To do that press the `<right arrow>` (11 times).
+
+To relpace the 1 and make it a 2 (to fix the bug) press `r` `2`. Now line 44 in the code should look like `index2 += 1;`. 
+
+![Screenshot of vim](lab4pics/vim.png)
+
+Now to save and exit vim type `:wq` `<enter>`. This should take you back to the terminal.
+
+This should have corrected the issue.
 
 ## Step 8: Running the tests, demonstrating that they now succeed
 
+To run the tests we will do the same thing as in step 6 to run the tests. To compile and run the tests type:
+
+`<control>` and `<r>` (at the same time) `javac` (which searches for javac in previous commands and effectivly typed the command 
+`javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`) then press `<enter>`
+
+`<control>` and `<r>` (at the same time) `java -` (again it seraches for `java -` in previous command run in history and finds the command
+`java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` then press `<enter>`
+
+![Screenshot of test results](lab4pics/testGood.png)
+
+As you can see the tests succeed!
+
 ## Step 9: Commiting and pushing the resulting change to your Github account
+
+Now we want to commit these changes to our Github account. To do this type this seris of commands:
+
+`git add L` `<tab>` `<enter>` (pressing tab autofills so that trhe command entered is `git add ListExamples.java`)
+
+`git commit -m "Fixed bugs in ListExamples.java"` (commits the change with the specified message)
+
+`git push` (pushes the change to GitHub account)
+
+![Screenshot of commiting](lab4pics/commit.png)
+
+This should commit the change to my GitHub account.
+
+
+Thank you for reading my lab report!

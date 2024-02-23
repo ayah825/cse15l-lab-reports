@@ -52,7 +52,7 @@ This now has cloned the repository into our machine so that we can actualy modif
 
 First we actually have to get into the file. To do that we type:
 
-`cd` `<space>` `l` `<tab>` `<enter>` (enter autofills in lab7/)
+`cd` `<space>` `l` `<tab>` `<enter>` (tab autofills in lab7/)
 
 Now lets compile and run the tests. To do that I typed:
 

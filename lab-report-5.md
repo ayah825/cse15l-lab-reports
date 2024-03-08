@@ -97,9 +97,13 @@ make sense).
 
 At the moment, however, the TA does not know this information because the student did not share their code. This could be many things 
 like perhaps some strange aftereffect of not removing a files from the grading area, the issue mentioned above, or any one of another
-myriad of issues. Let's get back to our exchange and see what the (fictional) TA responds. 
+myriad of issues. Let's get back to our exchange and see what the (fictional) TA responds. Once again this is a photoshopped respnse.
 
 ![The first edstem post response](lab5pics/reply1.png)
+
+![The seccond edstem post response](lab5pics/reply2.png)
+
+![The third edstem post response](lab5pics/reply3.png)
 
 <br>  
 

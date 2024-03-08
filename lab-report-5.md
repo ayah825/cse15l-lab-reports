@@ -2,7 +2,7 @@
 
 Welcome to the fifth and final lab report for this class. As per usual, please ignore any misspellings, I 
 can't figure out how to enable spell ckeck on here and my spelling is quite bad. For this lab report I will 
-be creating a fake debugging scenario and reflecting on the last lab. 
+be creating a fake debugging scenario and reflecting on the last few labs. 
 
 <br>  
 
@@ -107,7 +107,8 @@ myriad of issues. Let's get back to our exchange and see what the (fictional) TA
 
 ![The fourth edstem post response](lab5pics/reply4.png)
 
-As you can see, in this completly not real situation, the student ended up figuring out their issue. To elaborate on the fake TA's
+As you can see, in this completly not real situation, the student ended up figuring out their issue. I will adress some of the other 
+things mentioned in the lab report now because I wanted the posts to be somewhat realistic. To elaborate on the fake TA's
 suggestion to check the `test-output.txt` file in the repository this shows the issue because that file contains the terminal 
 output after a given command is run. Below are two screenshots of what the output is when we grade a full grade submission verses 
 a file that fails some tests to illustrate the reason the code fails visualy. 
@@ -116,7 +117,7 @@ a file that fails some tests to illustrate the reason the code fails visualy.
 
 ![Tests failing](lab5pics/failTest.png)
 
-In case it's not clear, when code does not fail any tests the output is very differnt to that that is expected when the code fails 
+In case it's not clear, when code does not fail any tests the output is very differnt to what is expected when the code fails 
 a few tests. If you look at the code it tailors to the case when tests are failed and does not consider the case when all tests succeed.
 The fixed code is below (the changes are in the last few lines of code).
 

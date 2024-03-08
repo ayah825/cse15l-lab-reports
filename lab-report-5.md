@@ -105,6 +105,91 @@ myriad of issues. Let's get back to our exchange and see what the (fictional) TA
 
 ![The third edstem post response](lab5pics/reply3.png)
 
+![The fourth edstem post response](lab5pics/reply4.png)
+
+As you can see, in this completly not real situation, the student ended up figuring out their issue. To elaborate on the fake TA's
+suggestion to check the `test-output.txt` file in the repository this shows the issue because that file contains the terminal 
+output after a given command is run. Below are two screenshots of what the output is when we grade a full grade submission verses 
+a file that fails some tests to illustrate the reason the code fails visualy. 
+
+![Tests passing](lab5pics/goodTest.png)
+
+![Tests failing](lab5pics/failTest.png)
+
+In case it's not clear, when code does not fail any tests the output is very differnt to that that is expected when the code fails 
+a few tests. If you look at the code it tailors to the case when tests are failed and does not consider the case when all tests succeed.
+The fixed code is below (the changes are in the last few lines of code).
+
+```
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+
+rm -rf student-submission
+rm -rf grading-area
+
+mkdir grading-area
+
+git clone $1 student-submission
+echo 'Finished cloning'
+
+# if found file
+if [[ -f student-submission/ListExamples.java ]] 
+then 
+    cp student-submission/ListExamples.java grading-area/
+    echo "File Found"
+else 
+    echo "File ListExamples.java not found"
+    exit 1
+fi
+
+# put things into grading area
+cp -r lib grading-area/
+
+cp TestListExamples.java grading-area/
+
+cd grading-area
+
+# compile
+javac -cp $CPATH *.java
+
+if [[ $? -ne 0 ]] 
+then 
+    echo "The program failed to complile"
+    exit 1
+fi
+
+# run code
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > test-output.txt
+
+# get test results and output them
+TESTRESULTS=$(cat test-output.txt | tail -n 2 | head -n 1)
+
+if [[ $(echo $TESTRESULTS | awk -F '[ ]'  '{print $1}') == 'OK' ]]
+then
+    TESTSRUN=$(echo $TESTRESULTS | awk -F '[( ]'  '{print $3}')
+    FAILURES=0
+else
+    TESTSRUN=$(echo $TESTRESULTS | awk -F '[, ]'  '{print $3}')
+    FAILURES=$(echo $TESTRESULTS | awk -F '[, ]'  '{print $6}')
+fi
+
+SUCSESS=$(( TESTSRUN - FAILURES ))
+
+echo "Your score is: $SUCSESS / $TESTSRUN "
+```
+
+As you can see these changes accounted for that difference in output depending on if all tests pass or not. Essentially, I added an 
+if statment to determine if the output contains `OK`. If that is the case then only the number of tests passed are printed and so
+we need to set `FAILURES` to 0 (bacause all the tests were passed). The number of tests is also written in a differnt format to when
+a test fails so we need to account for that as well. 
+
+To adress the fact that the writeup mentions to indlude a screenshot of the code working you can find that below.
+
+![terminal command working](lab5pics/working.png)
+
+## Reflection
+
+In this 
+
 <br>  
 
-Thanks!
+Thank you for taking the time to read my lab report! Have a good sping break!

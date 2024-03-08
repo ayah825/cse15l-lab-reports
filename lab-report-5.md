@@ -188,7 +188,11 @@ To adress the fact that the writeup mentions to indlude a screenshot of the code
 
 ## Reflection
 
-In this 
+In terms of cool things I enjoyed/learned in the seccond half of this class, I firstly enjoyed photshopping the EdStem posts for this 
+lab report. I havent done that in a while so it was fun to dust out my editing skills (basicaly it was a good excuse to do something fun).
+Aside from that, being able to commit changes to GitHub from the terminal has also been very helpful to me. I would also say that debbugging
+is a very helpful tool and I like that this class went more in depth into it. I'm not going to lie, I was aware of debbugging prior to this 
+and used tools on my IDE's (which I still prefer to the command line), however, it was nice to get more details about how they work. 
 
 <br>  
 

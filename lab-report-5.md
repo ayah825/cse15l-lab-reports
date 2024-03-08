@@ -18,6 +18,89 @@ post (I photoshoped these to make them look like EdStem posts because I thought 
 
 ![The first edstem post](lab5pics/post1.png)
 
+As you can see the student seems to be runing into an issue when they type `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`
+as it doesnt output the grade correctly. Instead the terminal prints 
+
+```
+Cloning into 'student-submission'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+Finished cloning
+File Found
+grade.sh: line 46: tests): syntax error in expression (error token is ")")
+Your score is:  / tests)
+```
+
+The student seems to be confused because the grading script still works with the other student submissions just not this one. 
+Obviously, at the moment there is not realy too much information to go off on so we need more information. Before we proceed,
+however, I will share the students `grade.sh` file contents so that you can have context as the exchange goes on. This buggy 
+code can also be accessed in [this repository](https://github.com/ayah825/list-examples-grader-bug/tree/main). 
+
+```
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+
+rm -rf student-submission
+rm -rf grading-area
+
+mkdir grading-area
+
+git clone $1 student-submission
+echo 'Finished cloning'
+
+# if found file
+if [[ -f student-submission/ListExamples.java ]] 
+then 
+    cp student-submission/ListExamples.java grading-area/
+    echo "File Found"
+else 
+    echo "File ListExamples.java not found"
+    exit 1
+fi
+
+# put things into grading area
+cp -r lib grading-area/
+
+cp TestListExamples.java grading-area/
+
+cd grading-area
+
+# compile
+javac -cp $CPATH *.java
+
+if [[ $? -ne 0 ]] 
+then 
+    echo "The program failed to complile"
+    exit 1
+fi
+
+# run code
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > test-output.txt
+
+# get test results and output them
+TESTRESULTS=$(cat test-output.txt | tail -n 2 | head -n 1)
+
+TESTSRUN=$(echo $TESTRESULTS | awk -F '[, ]'  '{print $3}')
+FAILURES=$(echo $TESTRESULTS | awk -F '[, ]'  '{print $6}')
+
+SUCSESS=$(( TESTSRUN - FAILURES ))
+
+echo "Your score is: $SUCSESS / $TESTSRUN "
+```
+
+I actually made this mistake in that lab and so I can tell you that the reason it's not working is because the grading script
+assumes that all outputs fail, when in reality because this student submission is completly correct it has different outputs 
+that require an extra case (that might not make sense at the momement but as the student exchage goes on hopfully this will
+make sense). 
+
+At the moment, however, the TA does not know this information because the student did not share their code. This could be many things 
+like perhaps some strange aftereffect of not removing a files from the grading area, the issue mentioned above, or any one of another
+myriad of issues. Let's get back to our exchange and see what the (fictional) TA responds. 
+
+![The first edstem post response](lab5pics/reply1.png)
+
 <br>  
 
 Thanks!
